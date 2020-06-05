@@ -145,6 +145,7 @@ Module Module1
     Private Sub FilesProcessing(DistDir As String, ByRef tmpfolderwasinuse As Boolean)
         Dim di As DirectoryInfo = New DirectoryInfo(MySourceDir)
         Dim ErrFileName As String
+        Dim tmp = 0
         For Each SourceExt In SourceExtFiles
             Dim MyFiles() As FileInfo = di.GetFiles(SourceExt)
             For Each Fl In MyFiles
